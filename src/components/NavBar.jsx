@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const NavBar = () => {
 	const [activeMenu, setActiveMenu] = useState(false);
@@ -6,34 +6,26 @@ const NavBar = () => {
 		<div className="App">
 			<nav className="navbar">
 				<div className="navbar-logo">
-					<a href="#">Logo</a>
+					<a href="#">Jonathan Rodriguez Aralla</a>
 				</div>
-				<ul className={`navbar-menu ${activeMenu ? "active" : ""}`}>
-					<li className="nav-item">
-						<a href="#" className="nav-link">
-							Home
-						</a>
-					</li>
-					<li className="nav-item">
-						<a href="#" className="nav-link">
-							About
-						</a>
-					</li>
-					<li className="nav-item">
-						<a href="#" className="nav-link">
-							Projects
-						</a>
-					</li>
-					<li className="nav-item">
-						<a href="#" className="nav-link">
-							Contact
-						</a>
-					</li>
-				</ul>
-				<div className="hamburger" onClick={() => setActiveMenu(!activeMenu)}>
-					<div className="bar"></div>
-					<div className="bar"></div>
-					<div className="bar"></div>
+				<div className="nav-link">
+					<ul className={`navbar-menu ${activeMenu ? 'active' : ''}`}>
+						<li className="nav-item">
+							<a href="#">Home</a>
+						</li>
+						<li className="nav-item">
+							<a href="#">About</a>
+						</li>
+						<li className="nav-item">
+							<a href="#">Projects</a>
+						</li>
+						<li className="nav-item">
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+					<div onClick={() => setActiveMenu(!activeMenu)}>
+						<img src="menu-btn.png" alt="menu hamburger" className="hamburger" />
+					</div>
 				</div>
 			</nav>
 
